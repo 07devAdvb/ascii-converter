@@ -18,6 +18,6 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o /ascii-converter ./backend/server/main.
 FROM debian:bullseye-slim
 WORKDIR /app
 COPY --from=backend-build /ascii-converter .
-COPY --from=frontend-build /app/frontend/dist ./frontend/dist
+COPY --from=frontend-build /app/frontend/dist ./build/frontend
 EXPOSE 8080
 CMD ["./ascii-converter"]
