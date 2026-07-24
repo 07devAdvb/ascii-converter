@@ -1,0 +1,17 @@
+{
+  "author": "4ster-light",
+  "repository": "https://github.com/4ster-light/artscii",
+  "homepage": "https://artscii.pages.dev",
+  "license": "MIT",
+  "name": "artscii-web",
+  "private": true,
+  "version": "v2.0.0",
+  "scripts": {
+    "build": "trunk build --release",
+    "deploy": "wrangler pages deploy",
+    "serve": "trunk serve"
+  },
+  "devDependencies": {
+    "wrangler": "^4.114.0"
+  }
+}

@@ -77,6 +77,7 @@
             alsa-lib
             libclang
             trunk
+            pnpm
             lld
           ];
           LIBCLANG_PATH = "${pkgs.libclang.lib}/lib";
