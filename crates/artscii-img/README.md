@@ -61,7 +61,8 @@ artscii-img = { git = "https://github.com/4ster-light/artscii" }
 # cargo add --git https://github.com/4ster-light/artscii artscii-img
 ```
 
-Refer to the [workspace README](../README.md) for more details on using the other crates.
+Refer to the [workspace README](../README.md) for more details on using the
+other crates.
 
 ## License
 
