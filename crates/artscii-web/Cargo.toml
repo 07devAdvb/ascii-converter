@@ -14,30 +14,29 @@ artscii-img = { path = "../artscii-img", default-features = false }
 
 # Leptos for reactive web UI
 leptos = { version = "0.8", features = ["csr"] }
-leptos_meta = "0.8"
 
 # Image processing
 image = "0.25"
-html-escape = "0.2"
 
 # WASM utilities
 wasm-bindgen = "0.2"
 wasm-bindgen-futures = "0.4"
 js-sys = "0.3"
 web-sys = { version = "0.3", features = [
-    "File",
-    "FileList",
-    "FileReader",
-    "HtmlInputElement",
     "Blob",
     "BlobPropertyBag",
-    "Url",
-    "DragEvent",
-    "DataTransfer",
     "Clipboard",
-    "Navigator",
-    "Window",
+    "DataTransfer",
     "Document",
+    "DragEvent",
+    "Event",
+    "File",
+    "FileList",
+    "HtmlElement",
+    "HtmlInputElement",
+    "Navigator",
+    "Url",
+    "Window",
 ] }
 
 # Utilities
