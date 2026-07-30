@@ -16,9 +16,14 @@
       system:
       let
         pkgs = import nixpkgs { inherit system; };
+
+        cargoFile = builtins.readFile ./crates/artscii-cli/Cargo.toml;
+        cargoToml = cargoFile |> fromTOML;
+        appName = (cargoToml.bin |> builtins.head).name;
+
         artscii = pkgs.rustPlatform.buildRustPackage {
-          pname = "artscii";
-          version = "2.0.0";
+          pname = appName;
+          version = cargoToml.package.version;
 
           src = builtins.path {
             path = ./.;
@@ -45,16 +50,16 @@
 
           cargoBuildFlags = [
             "-p"
-            "artscii-cli"
+            cargoToml.package.name
           ];
 
           doCheck = false;
 
           meta = with pkgs.lib; {
             description = "Convert any image to ASCII art";
-            homepage = "https://github.com/4ster-light/artscii";
+            homepage = cargoToml.package.repository;
             license = licenses.mit;
-            mainProgram = "artscii";
+            mainProgram = appName;
           };
         };
       in

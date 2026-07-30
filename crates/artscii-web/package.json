@@ -5,7 +5,7 @@
   "license": "MIT",
   "name": "artscii-web",
   "private": true,
-  "version": "v2.0.0",
+  "version": "2.0.0",
   "scripts": {
     "build": "trunk build --release",
     "deploy": "wrangler pages deploy",
